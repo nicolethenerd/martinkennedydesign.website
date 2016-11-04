@@ -13,7 +13,7 @@ h4 {
 }
 
 .bg-2 {
-   background-color: #cfc2b4;
+   background-color: #dad6cc;
 }
 
 .bg-gradient {
@@ -30,12 +30,12 @@ h4 {
 
 .copy-primary {
    font-family: 'Khula', sans-serif;
-   color: #cfc2b4;
+   color: #dad6cc;
    font-weight: 700;
 }
 
 .copy-secondary {
-   color: #cfc2b4;
+   color: #dad6cc;
    font-weight: 200;
    font-style: italic;
    letter-spacing: 1.5px;
@@ -106,7 +106,7 @@ h4 {
 }
 
 .bg-nav {
-   background-color: #cfc2b4;
+   background-color: #dad6cc;
    border-radius: 0;
    box-shadow: 0 2px 2px rgba(0,0,0, .2);
    width: 100%;
@@ -319,6 +319,14 @@ section {
    background-repeat: no-repeat;
 }
 
+.rdg-img-bg {
+
+   background-image: url("../img/rdg-website.jpg");
+   background-size: cover;
+   background-position: center;
+   background-repeat: no-repeat;
+}
+
 ///// About Carousel ////////
 #about {
    padding-bottom: 35px;
@@ -465,7 +473,7 @@ section {
    input:focus {
       background-color: #947239;
       border-bottom: 2px solid #947239;
-      color: #cfc2b4;
+      color: #dad6cc;
    }
 
    textarea {
@@ -579,6 +587,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    .c4 {
       border-right: 10px solid #947239;
    }
+
 }
 
 @media (min-width: 768px) {
@@ -677,7 +686,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
 
          li {
             width: 100%;
-            background-color: #cfc2b4;
+            background-color: #dad6cc;
             margin: 0 !important;
             text-align: center;
          }
@@ -705,7 +714,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    }
 
    .bg-nav {
-      background-color: #cfc2b4;
+      background-color: #dad6cc;
       border-radius: 0;
       box-shadow: 0 2px 2px rgba(0,0,0, .0);
       width: 100%;
