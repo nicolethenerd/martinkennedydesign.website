@@ -42,7 +42,7 @@ h4 {
 
 .copy-tertiary {
   color: #947239;
-  font-weight: 100;
+  font-weight: 400;
   font-style: italic;
   letter-spacing: 1.5px;
 }
@@ -264,11 +264,22 @@ section {
   border-top: 10px solid #947239;
 }
 
+.c2, .c3, .c4, .c5 {
+  cursor: pointer;
+}
+
 .a3-img-bg {
   background-image: url("../img/a3-branding.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.a3-img-bg:hover {
+  filter: none;
 }
 
 .gropro-img-bg {
@@ -276,6 +287,13 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.gropro-img-bg:hover {
+  filter: none;
 }
 
 .gropro-label-img-bg {
@@ -283,6 +301,13 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.gropro-label-img-bg:hover {
+  filter: none;
 }
 
 .hoppy-holidays-bg {
@@ -290,6 +315,13 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.hoppy-holidays-bg:hover {
+  filter: none;
 }
 
 .rdg-img-bg {
@@ -297,6 +329,13 @@ section {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: 100%;
+  filter: grayscale(50%);
+  transition: 400ms;
+}
+
+.rdg-img-bg:hover {
+  filter: none;
 }
 
 #about {
@@ -331,8 +370,7 @@ section {
   text-shadow: none;
 }
 
-.carousel-control:hover,
-.carousel-control:focus {
+.carousel-control:hover, .carousel-control:focus {
   opacity: 1;
   color: #947239;
 }
@@ -407,6 +445,17 @@ section {
 
 #contact {
   border-top: 10px solid #947239;
+}
+
+#contact h1 {
+  margin: 15px 0 55px 0;
+}
+
+#contact h1 span {
+  font-size: 35px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 
 #contact .border-container {
@@ -518,6 +567,60 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
   color: #947239;
 }
 
+#footer .row div {
+  min-height: 250px;
+}
+
+#footer .row div img {
+  max-height: 90%;
+  width: auto;
+}
+
+#footer .row .copy-tertiary {
+  font-weight: 400;
+  color: #dad6cc;
+  font-style: normal;
+}
+
+#footer .row svg {
+  width: 75%;
+  max-width: 55px;
+  min-width: 35px;
+  cursor: pointer;
+  fill: #947239;
+  transition: 350ms;
+}
+
+#footer .row svg:hover {
+  fill: #dad6cc;
+}
+
+#footer .row #i {
+  fill: #947239;
+  transition: 350ms;
+}
+
+#footer .row #i:hover {
+  fill: #dad6cc;
+}
+
+#footer .row .twitter {
+  width: 100%;
+}
+
+#footer .row .twitter #t {
+  fill: #947239;
+  transition: 350ms;
+}
+
+#footer .row .twitter #t:hover {
+  fill: #dad6cc;
+}
+
+.border-right {
+  border-right: 1px solid #947239;
+}
+
 .path {
   stroke-dasharray: 1000;
   stroke-dashoffset: 1000;
@@ -592,10 +695,28 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
   }
 }
 
+@media (max-width: 575px) {
+  .border-right {
+    border-right: none;
+  }
+  #footer .row .copy-tertiary {
+    font-weight: 400;
+    color: #dad6cc;
+    font-style: normal;
+    font-size: 15px !important;
+  }
+}
+
 @media (max-width: 768px) {
   #contact {
     padding-left: 0;
     padding-right: 0;
+  }
+  #footer .row .copy-tertiary {
+    font-weight: 400;
+    color: #dad6cc;
+    font-style: normal;
+    font-size: 10px;
   }
   .border-container {
     border: 3px solid #947239;
