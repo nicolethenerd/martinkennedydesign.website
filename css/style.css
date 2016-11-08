@@ -274,12 +274,11 @@ section {
   background-position: center;
   background-repeat: no-repeat;
   height: 100%;
-  filter: grayscale(50%);
-  transition: 400ms;
 }
 
 .a3-img-bg:hover {
-  filter: none;
+  filter: grayscale(50%);
+  transition: 400ms;
 }
 
 .gropro-img-bg {
@@ -336,6 +335,16 @@ section {
 
 .rdg-img-bg:hover {
   filter: none;
+}
+
+.view-btn {
+  background-color: #947239;
+  height: 35px;
+  width: 100px;
+  z-index: 100;
+  color: #dad6cc;
+  border: 1px solid red;
+  vertical-align: middle;
 }
 
 #about {

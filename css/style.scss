@@ -304,11 +304,10 @@ section {
    background-position: center;
    background-repeat: no-repeat;
    height: 100%;
-   filter:grayscale(50%);
-   transition: 400ms;
 
    &:hover {
-     filter: none;
+     filter:grayscale(50%);
+     transition: 400ms;
    }
 }
 
@@ -320,7 +319,6 @@ section {
   height: 100%;
   filter:grayscale(50%);
   transition: 400ms;
-
   &:hover {
     filter: none;
   }
@@ -355,6 +353,8 @@ section {
   }
 }
 
+
+
 .rdg-img-bg {
    background-image: url("../img/rdg-website.jpg");
    background-size: cover;
@@ -367,6 +367,17 @@ section {
   &:hover {
     filter: none;
   }
+}
+
+.view-btn {
+  background-color: #947239;
+  height: 35px;
+  width: 100px;
+  z-index: 100;
+  color: #dad6cc;
+  border: 1px solid red;
+  vertical-align: middle;
+
 }
 
 ///// About Carousel ////////
