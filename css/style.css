@@ -264,21 +264,68 @@ section {
   border-top: 10px solid #947239;
 }
 
-.c2, .c3, .c4, .c5 {
+.c2,
+.c3,
+.c4,
+.c5 {
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  display: block;
+  opacity: 1;
+}
+
+.a3-img-bg::before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.btn-view {
+  color: #dad6cc;
+  /* Good thing we set a fallback color! */
+  padding: 15px 50px;
+  position: absolute;
+  border: 2px solid #dad6cc;
+  opacity: 0;
+  transition: .5s;
+  top: calc(50% - 30px);
+  left: calc(50% - 75px);
+}
+
+.c2:hover .btn-view,
+.c2:focus .btn-view {
+  opacity: 1;
   cursor: pointer;
 }
 
+.c2:hover .a3-img-bg:before,
+.c2:focus .a3-img-bg:before {
+  display: block;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.c2:hover .a3-img-bg,
+.c2:focus .a3-img-bg {
+  transform: scale(1.2);
+}
+
 .a3-img-bg {
+  background-color: black;
   background-image: url("../img/a3-branding.jpg");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
   height: 100%;
-}
-
-.a3-img-bg:hover {
-  filter: grayscale(50%);
-  transition: 400ms;
+  width: 100%;
+  transition: all 0.5s;
 }
 
 .gropro-img-bg {
@@ -379,7 +426,8 @@ section {
   text-shadow: none;
 }
 
-.carousel-control:hover, .carousel-control:focus {
+.carousel-control:hover,
+.carousel-control:focus {
   opacity: 1;
   color: #947239;
 }
@@ -457,7 +505,7 @@ section {
 }
 
 #contact h1 {
-  margin: 15px 0 55px 0;
+  margin: 15px 0 55px;
 }
 
 #contact h1 span {
@@ -531,7 +579,9 @@ section {
   color: #947239;
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofil {
   background-color: transparent !important;
 }
 
@@ -556,7 +606,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
   color: #947239;
   padding-top: 10px;
   padding-left: 10px;
-  opacity: .5;
+  opacity: 0.5;
 }
 
 .btn-outline-primary:disabled:hover {

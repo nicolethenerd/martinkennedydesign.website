@@ -253,7 +253,6 @@ section {
 }
 
 ///// About ////////
-
 .square-border {
    width: auto;
    height: calc(100% - 2rem);
@@ -270,7 +269,6 @@ section {
 }
 
 ////// Column Drop //////////
-
 .column-fluid-container {
    display: -webkit-flex;
    display: flex;
@@ -293,22 +291,73 @@ section {
    border-top: 10px solid #947239;
 }
 
-.c2, .c3, .c4, .c5 {
+.c2,
+.c3,
+.c4,
+.c5 {
+   cursor: pointer;
+   overflow: hidden;
+   position: relative;
+   display: block;
+   opacity: 1;
+}
+
+// a3 image ////
+.a3-img-bg::before {
+   content: "";
+   display: block;
+   height: 100%;
+   width: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: rgba(0, 0, 0, 0.5);
+   opacity: 0;
+   transition: 0.5s;
+}
+
+.btn-view {
+  color: #dad6cc; /* Good thing we set a fallback color! */
+  padding: 15px 50px;
+  position: absolute;
+  border: 2px solid #dad6cc;
+  opacity: 0;
+  transition: .5s;
+  top: calc(50% - 30px);
+  left: calc(50% - 75px);
+}
+
+.c2:hover .btn-view,
+.c2:focus .btn-view {
+  opacity: 1;
   cursor: pointer;
+
 }
 
 
+
+.c2:hover .a3-img-bg:before,
+.c2:focus .a3-img-bg:before {
+   display: block;
+   opacity: 1;
+   cursor: pointer;
+}
+
+.c2:hover .a3-img-bg,
+.c2:focus .a3-img-bg {
+   transform: scale(1.2);
+}
+
 .a3-img-bg {
+   background-color: black;
    background-image: url("../img/a3-branding.jpg");
    background-size: cover;
    background-position: center;
-   background-repeat: no-repeat;
    height: 100%;
+   width: 100%;
+   transition: all 0.5s;
 
-   &:hover {
-     filter:grayscale(50%);
-     transition: 400ms;
-   }
+
 }
 
 .gropro-img-bg {
@@ -316,13 +365,13 @@ section {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-  height: 100%;
-  filter:grayscale(50%);
-  transition: 400ms;
-  &:hover {
-    filter: none;
-  }
+   height: 100%;
+   filter:grayscale(50%);
+   transition: 400ms;
 
+   &:hover {
+      filter:none;
+   }
 }
 
 .gropro-label-img-bg {
@@ -330,13 +379,13 @@ section {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-  height: 100%;
-  filter:grayscale(50%);
-  transition: 400ms;
+   height: 100%;
+   filter:grayscale(50%);
+   transition: 400ms;
 
-  &:hover {
-    filter: none;
-  }
+   &:hover {
+      filter:none;
+   }
 }
 
 .hoppy-holidays-bg {
@@ -344,44 +393,40 @@ section {
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-  height: 100%;
-  filter:grayscale(50%);
-  transition: 400ms;
+   height: 100%;
+   filter:grayscale(50%);
+   transition: 400ms;
 
-  &:hover {
-    filter: none;
-  }
+   &:hover {
+      filter:none;
+   }
 }
-
-
 
 .rdg-img-bg {
    background-image: url("../img/rdg-website.jpg");
    background-size: cover;
    background-position: center;
    background-repeat: no-repeat;
-  height: 100%;
-  filter:grayscale(50%);
-  transition: 400ms;
+   height: 100%;
+   filter:grayscale(50%);
+   transition: 400ms;
 
-  &:hover {
-    filter: none;
-  }
+   &:hover {
+      filter:none;
+   }
 }
 
 .view-btn {
-  background-color: #947239;
-  height: 35px;
-  width: 100px;
-  z-index: 100;
-  color: #dad6cc;
-  border: 1px solid red;
-  vertical-align: middle;
-
+   background-color: #947239;
+   height: 35px;
+   width: 100px;
+   z-index: 100;
+   color: #dad6cc;
+   border: 1px solid red;
+   vertical-align: middle;
 }
 
 ///// About Carousel ////////
-
 #about {
    padding-bottom: 35px;
    min-height: 726px;
@@ -489,17 +534,16 @@ section {
 
 ////// Contact Form //////
 #contact {
-  h1 {
-     margin: 15px 0 55px 0;
+   h1 {
+      margin: 15px 0 55px;
 
-     span {
-        font-size: 35px;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 400;
-        font-style: italic;
-     }
-  }
-
+      span {
+         font-size: 35px;
+         font-family: 'Raleway', sans-serif;
+         font-weight: 400;
+         font-style: italic;
+      }
+   }
    border-top: 10px solid #947239;
 
    .border-container {
@@ -569,8 +613,10 @@ section {
    }
 }
 
-input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
-  background-color: transparent !important;
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofil {
+   background-color: transparent !important;
 }
 
 .form-control:focus {
@@ -582,9 +628,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    border: none;
 }
 
-.has-danger  {
+.has-danger {
    box-shadow: none;
-
 }
 
 .controls {
@@ -597,9 +642,8 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    color: #947239;
    padding-top: 10px;
    padding-left: 10px;
-   opacity: .5;
+   opacity: 0.5;
 }
-
 
 .btn-outline-primary:disabled:hover {
    border: 2px solid #947239;
@@ -609,7 +653,7 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
 }
 
 .btn-outline-primary.disabled:hover {
-    border-color: #947239;
+   border-color: #947239;
 }
 
 .btn-outline-primary.disabled.focus {
@@ -618,61 +662,64 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    color: #947239;
 }
 
-
 ////// Footer //////
-
 #footer {
-  .row {
-    div {
-      min-height: 250px;
-      img {
-        max-height: 90%;
-        width: auto;
-      }
-    }
-    .copy-tertiary {
-      font-weight: 400;
-      color: #dad6cc;
-      font-style: normal;
-    }
-    svg {
-      width: 75%;
-      max-width: 55px;
-      min-width: 35px;
-      cursor: pointer;
-      fill: #947239;
-      transition: 350ms;
-        &:hover {
-          fill: #dad6cc;
-        }
-    }
-    #i {
-      fill: #947239;
-      transition: 350ms;
-      &:hover {
-        fill: #dad6cc;
-      }
-    }
-    .twitter {
-      width: 100%;
+   .row {
+      div {
+         min-height: 250px;
 
-      #t {
-        fill: #947239;
-        transition: 350ms;
-        &:hover {
-          fill: #dad6cc;
-        }
+         img {
+            max-height: 90%;
+            width: auto;
+         }
       }
-    }
-  }
+
+      .copy-tertiary {
+         font-weight: 400;
+         color: #dad6cc;
+         font-style: normal;
+      }
+
+      svg {
+         width: 75%;
+         max-width: 55px;
+         min-width: 35px;
+         cursor: pointer;
+         fill: #947239;
+         transition: 350ms;
+
+         &:hover {
+            fill: #dad6cc;
+         }
+      }
+
+      #i {
+         fill: #947239;
+         transition: 350ms;
+
+         &:hover {
+            fill: #dad6cc;
+         }
+      }
+
+      .twitter {
+         width: 100%;
+
+         #t {
+            fill: #947239;
+            transition: 350ms;
+
+            &:hover {
+               fill: #dad6cc;
+            }
+         }
+      }
+   }
 }
 
 .border-right {
-  border-right: 1px solid #947239;
+   border-right: 1px solid #947239;
 }
-
-
-
 
 ////// SVG ANIMATIONS //////
 .path {
@@ -708,7 +755,6 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    .c4 {
       border-right: 10px solid #947239;
    }
-
 }
 
 @media (min-width: 768px) {
@@ -762,20 +808,20 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
 }
 
 @media (max-width: 575px) {
-  .border-right {
-    border-right: none;
-  }
-  #footer {
-    .row {
-      .copy-tertiary {
-        font-weight: 400;
-        color: #dad6cc;
-        font-style: normal;
-        font-size: 15px !important;
-      }
-    }
-  }
+   .border-right {
+      border-right: none;
+   }
 
+   #footer {
+      .row {
+         .copy-tertiary {
+            font-weight: 400;
+            color: #dad6cc;
+            font-style: normal;
+            font-size: 15px !important;
+         }
+      }
+   }
 }
 
 @media (max-width: 768px) {
@@ -785,17 +831,15 @@ input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofil {
    }
 
    #footer {
-     .row {
-       .copy-tertiary {
-         font-weight: 400;
-         color: #dad6cc;
-         font-style: normal;
-         font-size: 10px;
-       }
-     }
+      .row {
+         .copy-tertiary {
+            font-weight: 400;
+            color: #dad6cc;
+            font-style: normal;
+            font-size: 10px;
+         }
+      }
    }
-
-
 
    .border-container {
       border: 3px solid #947239;
